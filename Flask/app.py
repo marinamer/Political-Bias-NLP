@@ -33,11 +33,11 @@ def main():
 def BiasDetector():
     if request.method == "POST":
         text = request.form['text']
-        # vectorize received text and save it 
+         
         # feed it to the model
-        prediction = model(text)
-        print(prediction)
-        return render_template('index.html', results = prediction)
+        result = model(text)
+        print(result)
+        return render_template('index.html', results = result)
     else:
         return render_template('index.html')
 

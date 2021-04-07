@@ -28,7 +28,7 @@
 		<!-- Formulario para introducir datos, hay que vincularlo con lo que has hecho -->
 		<div class="border-right p-2 w-50">
 			<!-- action="/action.php" method="post"   // lo que diga flask -->
-			<form class="p-5 "> 
+			<form class="p-5 "action= "/BiasDetector" method="POST"> 
 				<label for="exampleFormControlTextarea1" class="form-label text-white">Paste your text below:</label>
 				<textarea class="form-control col-sm-15" id="text" name="text" columns="50" rows="10" placeholder="Your text here"></textarea>
 
@@ -50,10 +50,14 @@
 				<!-- Zona de resultados: Habrá que cambiar este texto por los resultados -->
 				<br />
 				{% for result in results %}
-
-				<h2> The result of your prediction is {{result}} </h2>
-			
-				{%endfor%}
+					{% if result == 1.0 %}
+						This text has a left wing bias
+					{% elif result == 2.0 %}
+						This text has a right wing bias
+					{% elif result == 0.0 %}
+						This text has no bias
+					{% endif %}
+				{% endfor%}
 			</div>
 		</div>
 

@@ -1,7 +1,4 @@
 # ------------------  this file would look like this:
-    
-from sklearn.feature_extraction.text import TfidfTransformer, CountVectorizer
-
 from nltk.corpus import stopwords
 from nltk.tokenize import PunktSentenceTokenizer
 from nltk.stem import WordNetLemmatizer 
@@ -16,6 +13,7 @@ nltk.download('vader_lexicon')
     
     
 def preprocess(text):
+    text = str(text)
     #strip 
     text = re.sub(r'<b>.+?</b>', '', text) 
     text = re.sub(r'<i>.+?</i>', '', text)
@@ -59,7 +57,7 @@ def model(text):
     model = pickle.load(open('Ada3est76acc.sav', 'rb'))
         
     result = model.predict(text_vectorized)
-    print(result)
+    
     return result
 
 

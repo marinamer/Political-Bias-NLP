@@ -1,6 +1,5 @@
 import pandas as pd
 from sklearn.feature_extraction.text import TfidfVectorizer
-
 import pickle
 from nltk.corpus import stopwords
 from nltk.tokenize import PunktSentenceTokenizer
