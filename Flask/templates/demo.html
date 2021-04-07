@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>BB</title>
+</head>
+
+<body>
+    <h1> Welcome to the Bias Detector</h1>
+
+    <form action= "/BiasDetector" method="POST">
+        <label>Please paste your text here:</label>
+        <br>
+        <textarea id="text" name="text" rows="4" cols="50">
+        </textarea>
+        <br>
+        <input type="submit" value="Submit Text"/>
+    </form>
+
+    {% for result in results %}
+
+    <h2> The result of your prediction is {{result}} </h2>
+
+    {%endfor%}
+
+</body>
+</html>
