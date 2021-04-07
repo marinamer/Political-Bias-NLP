@@ -30,18 +30,22 @@ def main():
 
 @app.route('/BiasDetector', methods = ['GET', 'POST'])
 
+
+
 def BiasDetector():
     if request.method == "POST":
-        text = request.form['text']
-         
-        # feed it to the model
-        result = model(text)
-        print(result)
-        return render_template('index.html', results = result)
+        if len(request.form['text']) != 0:
+            text = request.form['text']
+            # result = [4.]
+            # feed it to the model
+            result = model(text)
+            print(result)
+            return render_template('index.html', text = text, results = result)
+        else:
+             return render_template('index.html')
+
     else:
         return render_template('index.html')
-
-
 
 
 

@@ -44,7 +44,13 @@
 		<div class="p-5 flex-shrink-1">
 			
 			<div class="text-white">
-
+				Text:
+				<br />
+				<br />
+				{{text}}
+				<br />
+				<br />
+				<br />	
 				Result:
 				<br />			
 				<!-- Zona de resultados: Habrá que cambiar este texto por los resultados -->
@@ -56,6 +62,8 @@
 						This text has a right wing bias
 					{% elif result == 0.0 %}
 						This text has no bias
+					{% else %}
+						Submit a text to be analysed
 					{% endif %}
 				{% endfor%}
 			</div>
