@@ -23,7 +23,7 @@
   --success: #28a745;
   --info: #17a2b8;
   --warning: #ffc107;
-  --danger: #dc3545;
+  --danger: #f8d1c2;
   --light: #f8f9fa;
   --dark: #404034;
   --breakpoint-xs: 0;
@@ -39,6 +39,34 @@
 *::before,
 *::after {
   box-sizing: border-box;
+}
+
+.correct_margin_custom {
+  margin-top: -45px;
+}
+
+.custom_button_large {
+  width: 125px !important;
+}
+
+@media (max-height: 900px) {
+  .fixed-bottom {
+    position: relative;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+  }
+}
+
+@media (mIN-height: 900px) {
+  .fixed-bottom {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 1030;
+  } 
 }
 
 html {
@@ -561,11 +589,14 @@ pre code {
   margin-left: auto;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 576px) {
   .container {
     max-width: 540px;
   }
 }
+
+
+
 
 @media (min-width: 768px) {
   .container {
@@ -7324,13 +7355,7 @@ button.bg-dark:focus {
   z-index: 1030;
 }
 
-.fixed-bottom {
-  position: fixed;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 1030;
-}
+
 
 @supports ((position: -webkit-sticky) or (position: sticky)) {
   .sticky-top {

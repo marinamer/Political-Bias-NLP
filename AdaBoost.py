@@ -95,15 +95,25 @@ print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 pickle.dump(abc, open('Ada3est76acc.sav', 'wb'))
 
 
+# ---------- trying some other parameters
+
+svc=SVC(probability=True, kernel='linear')
+
+# Create adaboost classifer object
+abc =AdaBoostClassifier(n_estimators=10, base_estimator=svc,learning_rate=0.1)
+
+# Train Adaboost Classifer
+model = abc.fit(x_train_tfidf, y_train)
+
+#Predict the response for test dataset
+y_pred = model.predict(x_test_tfidf)
 
 
+# Model Accuracy, how often is the classifier correct?
+print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 
 
-
-
-
-
-
+pickle.dump(abc, open('Ada10est81acc.sav', 'wb'))
 
 
 

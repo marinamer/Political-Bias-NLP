@@ -54,7 +54,7 @@ def model(text):
     
     # Apply Trained Model   
         
-    model = pickle.load(open('Ada3est76acc.sav', 'rb'))
+    model = pickle.load(open('Ada10est81acc.sav', 'rb'))
         
     result = model.predict(text_vectorized)
     
