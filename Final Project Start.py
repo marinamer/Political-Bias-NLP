@@ -49,32 +49,32 @@ manifesto_project['domain_code'] = manifesto_project['domain_code'].astype('cate
 
 
 
-# def preprocess(text):
-#     #strip 
-#     text = re.sub(r'<b>.+?</b>', '', text) 
-#     text = re.sub(r'<i>.+?</i>', '', text)
-#     text = re.sub(r'<.+?>', '', text) # remove all other html tags
-#     text = re.sub(r'https?:\/\/.*[\r\n]*', '', text)
+def preprocess(text):
+    #strip 
+    text = re.sub(r'<b>.+?</b>', '', text) 
+    text = re.sub(r'<i>.+?</i>', '', text)
+    text = re.sub(r'<.+?>', '', text) # remove all other html tags
+    text = re.sub(r'https?:\/\/.*[\r\n]*', '', text)
     
-#     ##  remove punctuations, non-alphanumeric characters and underscores
-#     text = re.sub(r'[^\w\s]|\d|_', ' ', text)
+    ##  remove punctuations, non-alphanumeric characters and underscores
+    text = re.sub(r'[^\w\s]|\d|_', ' ', text)
     
-#     text = str(text).lower().strip()
+    text = str(text).lower().strip()
     
-#     #tokenize
-#     tokens = word_tokenize(text)
+    #tokenize
+    tokens = word_tokenize(text)
     
-#     #remove stopwords
-#     stop_words = stopwords.words('english')
-#     tokens = [t for t in tokens if t not in stop_words]
+    #remove stopwords
+    stop_words = stopwords.words('english')
+    tokens = [t for t in tokens if t not in stop_words]
     
-#     #lemmatize
-#     lemmatizer = WordNetLemmatizer()
-#     tokens = [lemmatizer.lemmatize(t) for t in tokens]
-#     text = " ".join(tokens)
-#     text = str(text).lower().strip()
+    #lemmatize
+    lemmatizer = WordNetLemmatizer()
+    tokens = [lemmatizer.lemmatize(t) for t in tokens]
+    text = " ".join(tokens)
+    text = str(text).lower().strip()
     
-#     return text
+    return text
 
 
 
