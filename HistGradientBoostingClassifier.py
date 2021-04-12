@@ -122,7 +122,7 @@ print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
 #Accuracy: 0.764
 
 
-# -----------------------
+# ----------------------- Saving it
 
 pickle.dump(abc, open('Ada3est76acc.sav', 'wb'))
 

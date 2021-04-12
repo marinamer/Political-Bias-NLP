@@ -29,8 +29,7 @@ manifesto_project['cmp_code'] = manifesto_project['cmp_code'].astype('int')
 manifesto_project['domain_name'] = manifesto_project['domain_name'].astype('category')
 
 
-manifesto_project.dtypes
-
+# ............
 import gensim
 from gensim.utils import simple_preprocess
 from gensim.parsing.preprocessing import STOPWORDS

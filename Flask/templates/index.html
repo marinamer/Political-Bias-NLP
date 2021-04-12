@@ -5,58 +5,55 @@
 	<head>
 		<!-- Títlo de la página web  -->
 		<title> Bias Detector </title>
-		<link rel="stylesheet" href="{{ url_for('static',filename='css/bootstrap.css') }}">
+		<link rel="stylesheet" href="{{ url_for('static',filename='stylesheets/bootstrap.css') }}" type="text/css">
+		
 	</head>
 	
 	<body class="bg-secondary">
 
 		
-		<div class=" p-2 bg-dark text-white text-lg-center" style="color: beige;">
+		<div class="p-2 bg-dark-2 bg-dark text_color_beige text-lg-center">
 	
 			<!-- Logo de Iron Hack  -->
 			<svg alt="Ironhack Logo" width="68" height="68" viewBox="0 0 48 48" fill="none"><path d="M22.5328 0.334921L3.163 10.962C2.35393 11.4086 1.69922 12.5143 1.69922 13.434V34.566C1.69922 35.4857 2.35393 36.5967 3.163 37.038L22.5328 47.6651C23.3418 48.1116 24.6566 48.1116 25.4657 47.6651L44.8354 37.038C45.6445 36.5914 46.2992 35.4857 46.2992 34.566V13.434C46.2992 12.5143 45.6445 11.4033 44.8354 10.962L25.4657 0.334921C25.0611 0.11164 24.5288 0 24.0019 0C23.4696 0 22.9373 0.11164 22.5328 0.334921Z" fill="#2DC5FA"></path><path d="M16.8263 18.5063C16.8317 18.5063 16.8317 18.5063 16.837 18.5063C16.8317 18.5063 16.8317 18.5063 16.8263 18.5063ZM16.821 18.5063C16.821 18.5063 16.8263 18.5063 16.821 18.5063C16.821 18.5063 16.821 18.5063 16.8157 18.5063H16.821ZM16.7944 18.501C16.7997 18.501 16.7997 18.501 16.7944 18.501C16.7997 18.501 16.7997 18.501 16.7997 18.501C16.7997 18.501 16.7997 18.501 16.7944 18.501ZM11.9453 22.7274H13.5315V14.9444H11.9453V22.7274ZM16.9168 18.5116C16.9168 18.5116 16.9168 18.5169 16.9168 18.5116C16.9168 18.5169 16.9168 18.5169 16.9168 18.5116ZM16.8955 18.5116C16.9062 18.5116 16.9115 18.5116 16.9168 18.5116C16.9115 18.5116 16.9009 18.5116 16.8955 18.5116ZM16.853 18.5063C16.8583 18.5063 16.8583 18.5063 16.8636 18.5063C16.8636 18.5063 16.8583 18.5063 16.853 18.5063ZM16.7944 18.501V16.1618C17.1191 16.1193 17.4811 16.098 17.7898 16.098C18.9289 16.098 19.3174 16.4436 19.3174 17.3048C19.3174 18.2936 18.7372 18.5435 17.7578 18.5435C17.4491 18.5435 17.1457 18.5382 16.837 18.5063C16.8317 18.5063 16.8317 18.5063 16.8263 18.5063H16.821C16.821 18.5063 16.8157 18.5063 16.8104 18.5063H16.8157H16.8104H16.8051C16.8051 18.5063 16.8051 18.5063 16.8104 18.5063H16.8051C16.8051 18.501 16.7997 18.501 16.7944 18.501C16.7997 18.501 16.7944 18.501 16.7944 18.501ZM15.2189 15.0773V22.7274H16.7944V19.7556C17.0712 19.7715 17.4278 19.7875 17.7472 19.7875L19.344 22.722H21.1645L19.3866 19.6067C20.3022 19.3303 20.8823 18.6817 20.8823 17.3048C20.8823 15.1996 19.4718 14.8594 17.7525 14.8594C16.821 14.8647 15.8949 14.9551 15.2189 15.0773ZM23.746 18.8359C23.746 17.2463 23.778 16.1618 25.2577 16.1618C26.7321 16.1618 26.7694 17.2463 26.7694 18.8359C26.7694 20.4201 26.7321 21.5046 25.2577 21.5046C23.7833 21.5046 23.746 20.4201 23.746 18.8359ZM22.1439 18.8359C22.1439 21.6535 22.8358 22.8071 25.263 22.8071C27.6849 22.8071 28.3769 21.6535 28.3769 18.8359C28.3769 16.0183 27.6849 14.8647 25.263 14.8647C22.8358 14.8647 22.1439 16.0183 22.1439 18.8359ZM29.8566 16.0449V22.722H31.2778V16.9965L33.753 21.7811C34.1522 22.5572 34.5194 22.8071 35.0996 22.8071C35.7064 22.8071 36.0524 22.4456 36.0524 21.6216V14.9444H34.6312V20.6487L32.1561 15.8854C31.7622 15.1358 31.3524 14.8647 30.8147 14.8647C30.2186 14.8647 29.8566 15.2156 29.8566 16.0449Z" fill="white"></path><path d="M16.4965 25.6291V28.9677H12.3181V25.6291H11.6953V33.024H12.3181V29.5099H16.4965V33.024H17.1193V25.6291H16.4965ZM35.4138 25.6291L31.9913 29.0527V25.6291H31.3685V33.024H31.9913V29.393L35.4777 33.024H36.3081L32.6194 29.2016L36.2069 25.6291H35.4138ZM21.6224 26.384L23.0915 30.3074H20.148L21.6224 26.384ZM21.1806 25.9747L18.4872 33.0186H19.126L19.951 30.823H23.2884L24.1082 33.0186H24.7735L22.1121 25.9747C22.0056 25.6982 21.8619 25.5547 21.6437 25.5547C21.4254 25.5547 21.2871 25.6929 21.1806 25.9747ZM25.4016 29.3239C25.4016 31.9448 25.9765 33.0984 28.3505 33.0984C28.9626 33.0984 29.5055 33.0346 29.9686 32.9442L29.91 32.4445C29.5002 32.503 29.0903 32.5561 28.6751 32.5561C26.3384 32.5561 26.035 31.4982 26.035 29.3292C26.035 27.1655 26.2905 26.0969 28.6751 26.0969C29.0744 26.0969 29.5268 26.1554 29.9047 26.2139L29.9633 25.6982C29.5002 25.6078 28.9413 25.5547 28.3451 25.5547C25.9765 25.5547 25.4016 26.6977 25.4016 29.3239Z" fill="white"></path></svg>
 			
-			<h1 style="color:#e6e6e6;">
+			<h1 class="custom-text-effect">
 				<!-- Títulop del encabezado  -->
 				Bias Detector
 			</h1>
-		
+
 		</div>
-		
 
 
-	<div class="d-flex bg-secondary">
+		<div class="d-flex bg-secondary">
 			
-		<!-- Formulario para introducir datos, hay que vincularlo con lo que has hecho -->
-		<div class="border-right p-2 w-50">
-			<!-- action="/action.php" method="post"   // lo que diga flask -->
-			<form class="p-5 "action= "/BiasDetector" method="POST"> 
-				<label for="exampleFormControlTextarea1" class="form-label text-white">Paste your text below:</label>
-				<textarea class="form-control col-sm-15" id="text" name="text" columns="50" rows="10" placeholder="Your text here"></textarea>
+			<!-- Formulario para introducir datos, hay que vincularlo con lo que has hecho -->
+			<div class="border-right p-5 w-50">
+				<form action="/BiasDetector" method="POST"> 
+					<label for="exampleFormControlTextarea1" class="form-label text-white">Paste your text below:</label>
+					<textarea class="form-control col-sm-12" id="text" name="text" columns="500" rows="10" placeholder="Your text here"></textarea>
+					<br />
+					<!-- Botón de enviar -->
+					<input type="submit" value="Submit" class="custom_button_large btn btn-primary m-lg-2" />
+					<!-- Botón clear  -->
+					<input type="submit" value="Clear" class="custom_button_large btn btn-danger m-lg-2" />
+				</form>
+	
+			</div>
 
-				<!-- Botón de enviar -->
-				<input type="submit" value="Submit" class="btn btn-raised btn-primary m-lg-2" />
 
-				<!-- Botón clear  -->
-				<input type="submit" value="Clear" class="btn btn-danger m-lg-2" />
-			</form>
-
-		</div>
 
 		<div class="p-5 flex-shrink-1">
 			
 			<div class="text-white">
-				<h3>Text: </h3>
-				<br />
-				<br />
+				<h3 class="custom_result_title">Text: </h3>
+			
 				{{text}}
-				<br />
-				<br />
-				<br />	
-				<h3>Result: </h3>
+				
+				<h3 class="custom_result_text"> Result: </h3>
 				<br />			
 				<!-- Zona de resultados: Habrá que cambiar este texto por los resultados -->
-				<br />
+				
 				{% for result in results %}
 					{% if result == 1.0 %}
 						This text has a left wing bias
@@ -78,9 +75,7 @@
 		<div class="p-3 text-white bg-secondary border-top">
 			<!-- A continuación va una breve descripción del proyecto -->
 			<h4>Project description</h4>
-			The aim of this project is to detect political bias in any text.
-			<br />
-			To achieve this goal the input text is cleaned and converted into a matrix of TF-IDF features before being processed by the Machine Learning algorythm (AdaBoost with SVC as base estimator), that analyses the features of the text and assigns a category to it.
+			The aim of this project is to detect political bias in any text. To achieve this goal the input text is cleaned and converted into a matrix of TF-IDF features before being processed by the Machine Learning algorythm (AdaBoost with SVC as base estimator), that analyses the features of the text and assigns a category to it.
 			<br />
 			<br />
 			The categories used are based on the Project Manifesto Rile Index. The database used to extract said categories is the following:
@@ -95,39 +90,54 @@
 
 
 
-			<!-- Zona de logos, estan todos en SVG para no usar imagenes -->
-			<!-- Logo de python -->
-			<svg width="64" height="64" viewBox="0 0 256 255" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="xMinYMin meet"><defs><linearGradient x1="12.959%" y1="12.039%" x2="79.639%" y2="78.201%" id="a"><stop stop-color="#387EB8" offset="0%"/><stop stop-color="#366994" offset="100%"/></linearGradient><linearGradient x1="19.128%" y1="20.579%" x2="90.742%" y2="88.429%" id="b"><stop stop-color="#FFE052" offset="0%"/><stop stop-color="#FFC331" offset="100%"/></linearGradient></defs><path d="M126.916.072c-64.832 0-60.784 28.115-60.784 28.115l.072 29.128h61.868v8.745H41.631S.145 61.355.145 126.77c0 65.417 36.21 63.097 36.21 63.097h21.61v-30.356s-1.165-36.21 35.632-36.21h61.362s34.475.557 34.475-33.319V33.97S194.67.072 126.916.072zM92.802 19.66a11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13 11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.13z" fill="url(#a)"/><path d="M128.757 254.126c64.832 0 60.784-28.115 60.784-28.115l-.072-29.127H127.6v-8.745h86.441s41.486 4.705 41.486-60.712c0-65.416-36.21-63.096-36.21-63.096h-21.61v30.355s1.165 36.21-35.632 36.21h-61.362s-34.475-.557-34.475 33.32v56.013s-5.235 33.897 62.518 33.897zm34.114-19.586a11.12 11.12 0 0 1-11.13-11.13 11.12 11.12 0 0 1 11.13-11.131 11.12 11.12 0 0 1 11.13 11.13 11.12 11.12 0 0 1-11.13 11.13z" fill="url(#b)"/></svg>
+			<!-- LOGOS ZONE -->
+			<!-- Logo python -->
+			<img src="{{ url_for('static',filename='img/python.svg') }}"  class="correct_margin_custom" alt="Spyder" width="70" height="70" />   
+			<!-- <img src="img/python.svg"  class="correct_margin_custom" alt="Spyder" width="64" height="64" /> -->
+
+			<!-- Logo de Spyder  -->
+			<img src="{{ url_for('static',filename='img/Spyder_logo.svg') }}"  class="correct_margin_custom" alt="Spyder" width="70" height="70" />   
+			<!-- <img src="img/Spyder_logo.svg"  class="correct_margin_custom" alt="Spyder" width="70" height="70"/> -->
 			
-			<!-- Logo de Spyder -->
-			<img src="{{ url_for('static',filename='img/spider_logo.png') }}"  class="correct_margin_custom" alt="Spyder" width="70" height="70"> <img/>
-			
-			<!-- Logo de bootstrap -->
-			<svg width="64" height="64" viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" ><path d="M0 222.991C0 241.223 14.779 256 33.009 256H222.99C241.223 256 256 241.221 256 222.991V33.01C256 14.777 241.221 0 222.991 0H33.01C14.777 0 0 14.779 0 33.009V222.99z" fill="#563D7C"/><path d="M106.158 113.238V76.985h31.911c3.04 0 5.97.253 8.792.76 2.822.506 5.319 1.41 7.49 2.713 2.17 1.303 3.907 3.112 5.21 5.427 1.302 2.316 1.954 5.283 1.954 8.9 0 6.513-1.954 11.217-5.862 14.111-3.907 2.895-8.9 4.342-14.979 4.342h-34.516zM72.075 50.5v155h75.112c6.947 0 13.713-.868 20.298-2.605 6.585-1.737 12.446-4.414 17.584-8.032 5.137-3.618 9.226-8.286 12.265-14.002 3.04-5.717 4.559-12.483 4.559-20.298 0-9.697-2.352-17.982-7.055-24.856-4.704-6.875-11.832-11.687-21.384-14.437 6.947-3.328 12.194-7.598 15.74-12.808 3.545-5.21 5.318-11.722 5.318-19.538 0-7.236-1.194-13.314-3.582-18.235-2.388-4.92-5.753-8.864-10.095-11.831-4.341-2.967-9.551-5.102-15.63-6.404-6.078-1.303-12.808-1.954-20.189-1.954H72.075zm34.083 128.515v-42.549h37.121c7.381 0 13.315 1.7 17.802 5.102 4.486 3.401 6.73 9.081 6.73 17.041 0 4.053-.688 7.381-2.063 9.986-1.375 2.605-3.22 4.668-5.536 6.187-2.315 1.52-4.993 2.605-8.032 3.257-3.04.65-6.223.976-9.552.976h-36.47z" fill="#FFF"/></svg>
-			
-			<!-- Logo de html5 -->
-			<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="64" height="64">
-				<title>HTML5 Logo</title>
-				<polygon fill="#F16529" points="256,480.523 376.03,447.246 404.27,130.894 256,130.894"/>
-				<polygon fill="#E44D26" points="107.644,470.877 74.633,100.62 437.367,100.62 404.321,470.819 255.778,512"/><polygon fill="#EBEBEB" points="256,268.217 195.91,268.217 191.76,221.716 256,221.716 256,176.305 255.843,176.305 142.132,176.305 143.219,188.488 154.38,313.627 256,313.627"/>
-				<polygon fill="#EBEBEB" points="256,386.153 255.801,386.206 205.227,372.55 201.994,336.333 177.419,336.333 156.409,336.333 162.771,407.634 255.791,433.457 256,433.399"/>
-				<path d="M108.382,0h23.077v22.8h21.11V0h23.078v69.044H152.57v-23.12h-21.11v23.12h-23.077V0z"/>
-				<path d="M205.994,22.896h-20.316V0h63.72v22.896h-20.325v46.148h-23.078V22.896z"/>
-				<path d="M259.511,0h24.063l14.802,24.26L313.163,0h24.072v69.044h-22.982V34.822l-15.877,24.549h-0.397l-15.888-24.549v34.222h-22.58V0z"/>
-				<path d="M348.72,0h23.084v46.222h32.453v22.822H348.72V0z"/>
-				<polygon fill="#FFFFFF" points="255.843,268.217 255.843,313.627 311.761,313.627 306.49,372.521 255.843,386.191 255.843,433.435 348.937,407.634 349.62,399.962 360.291,280.411 361.399,268.217 349.162,268.217"/>
-				<polygon fill="#FFFFFF" points="255.843,176.305 255.843,204.509 255.843,221.605 255.843,221.716 365.385,221.716 365.385,221.716 365.531,221.716 366.442,211.509 368.511,188.488 369.597,176.305"/>
-			</svg>
-			
-			<!-- Logo de CSS3 -->
-			<svg width="64" height="64" enable-background="new 0 0 1771 2499.8" viewBox="0 0 1771 2499.8" xmlns="http://www.w3.org/2000/svg"><path d="m1387.8 92.5h-146.9l152.8 165.9v78.9h-314.8v-92.4h152.8l-152.8-165.9v-79h309zm-371.4 0h-147.1l153 165.9v78.9h-314.9v-92.4h152.8l-152.8-165.9v-79h309zm-367.8 3.8h-158.5v144.8h158.5v96.3h-271.3v-337.4h271.3z" fill="#131313"/><path d="m161.2 2299.1-161.2-1807.7h1771l-161.4 1807.4-725.2 201z" fill="#1572b6"/><path d="m885.5 2346.2 586-162.5 137.8-1544.5h-723.8z" fill="#33a9dc"/><path d="m885.5 1294.1h293.4l20.2-227h-313.6v-221.6h556l-5.3 59.5-54.5 611h-496.2z" fill="#fff"/><path d="m886.7 1869.9h-1l-246.9-66.7-15.8-176.8h-222.4l31.1 348.1 454.2 126.4h1.3v-231z" fill="#ebebeb"/><path d="m1160.1 1506.3-26.7 296.7-247.3 66.7v231l454.5-126 3.3-37.5 38.6-431h-222.4z" fill="#fff"/><path d="m886.3 845.5v221.7h-535.4l-4.6-49.8-10.1-112.4-5.3-59.5zm-.8 448.6v221.7h-244.1l-4.3-49.8-10.1-112.4-5.3-59.5h263.7z" fill="#ebebeb"/></svg>
+			<!-- Logo Jupyter  --> 
+			<img src="{{ url_for('static',filename='img/jupyter.svg') }}"  class="correct_margin_custom" alt="scikit_learn_logo" width="68px" height="64px" />   
+			<!-- <img src="img/jupyter.svg"   class="correct_margin_custom" alt="scikit_learn_logo" width="68px" height="64px"/> -->
+
+			<!-- Logo scikit learn  -->
+			<img src="{{ url_for('static',filename='img/sklearn.svg') }}"   class="correct_margin_custom" alt="scikit_learn_logo" width="128px" height="55px"/>
+			<!-- <img src="img/sklearn.svg"   class="correct_margin_custom" alt="scikit_learn_logo" width="128px" height="55px"/> -->
+
+			<!-- Logo numpy  -->
+			<img src="{{ url_for('static',filename='img/numpy.svg') }}"  class="correct_margin_custom" alt="pandas_logo" width="188px" height="120px"/>
+			<!-- <img src="img/numpy.svg"  class="correct_margin_custom" alt="pandas_logo" width="188px" height="120px"/>  -->
+
+			<!-- Logo pandas  -->
+			<img src="{{ url_for('static',filename='img/pandas.svg') }}"  class="correct_margin_custom" alt="pandas_logo" width="188px" height="120px"/>
+			<!-- <img src="img/pandas.svg"  class="correct_margin_custom" alt="pandas_logo" width="188px" height="120px"/>  -->
+
+			<!-- Logo flask  -->
+			<img src="{{ url_for('static',filename='img/flask.svg') }}"  class="correct_margin_custom" alt="flask_logo" width="148" height="60"/>
+			<!-- <img src="img/flask.svg"  class="correct_margin_custom" alt="flask_logo" width="148" height="60"/>  -->
+
+			<!-- Logo bootstrap -->
+			<img src="{{ url_for('static',filename='img/bootstrap.svg') }}" class="correct_margin_custom" alt="bootstrap_logo" width="64" height="64"/>
+			<!-- <img src="img/bootstrap.svg" class="correct_margin_custom" alt="bootstrap_logo" width="64" height="64"/>  -->
+
+			<!-- Logo html5 -->
+			<img src="{{ url_for('static',filename='img/html5.svg') }}" class="correct_margin_custom" alt="hmlt5_logo" width="64" height="64"/>
+			<!-- <img src="img/html5.svg" class="correct_margin_custom" alt="hmlt5_logo" width="64" height="64"/> -->
+
+			<!-- Logo CSS3 -->
+			<img src="{{ url_for('static',filename='img/css.svg') }}" class="correct_margin_custom" alt="css_logo" width="64" height="64"/>
+			<!-- <img src="img/css.svg" class="correct_margin_custom" alt="css_logo" width="64" height="64"/> -->
 
 		</div>
-
-		<div class="fixed-bottom p-2 bg-dark  text-white">  
-			<span class="badge badge-success"></span> Web creada por Marina Amer con bootstrap  
+		<!-- END LOGOS ZONE -->
+<!--
+		<div class="fixed-bottom p-2 bg-dark-bottom text-white">  
+			Website created by Marina Amer with bootstrap  
 		</div>
-
+ -->
 
 	</body>
 </html>

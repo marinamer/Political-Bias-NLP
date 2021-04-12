@@ -147,6 +147,7 @@ print(classification_report(y_test, y_pred))
 
 #  -------------------
 
+
 model = RandomForestClassifier(max_depth= 15, min_samples_leaf= 2, min_samples_split= 100, n_estimators= 500)
 
 

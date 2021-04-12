@@ -1,23 +1,14 @@
 from flask import Flask, render_template, request
-
 #  We import our trained model from the file where it's stored
 from ml_model import model
 
 
 
 
-
-
-
-
-
-
-# ------------------ FLASK
-
 app = Flask(__name__)
 
 # now that I have created my flask app I have to define as many routes as I need. 
-# to do this, we need to call something called a python decorator
+
 
 @app.route('/')
 
@@ -59,11 +50,7 @@ if __name__ == "__main__":
     app.run(debug=False)
     
     
-# on the other hand, if I create another .py file where I import app and I write
 
-# app.main()
-
-# the preceding line of code is not going to be executed because  __name__ != "__main__".
 
 
 

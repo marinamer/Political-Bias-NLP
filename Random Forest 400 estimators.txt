@@ -1,4 +1,0 @@
-Random Forest 400 estimators results:
-Mean Absolute Error: 83.05925686872266
-Mean Squared Error: 20483.82374092406
-Root Mean Squared Error: 143.12170953745647
