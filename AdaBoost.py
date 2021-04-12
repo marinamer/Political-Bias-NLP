@@ -49,26 +49,12 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.svm import SVC
 
 
-svc=SVC(probability=True, kernel='linear')
-
-# Create adaboost classifer object
-abc =AdaBoostClassifier(n_estimators=3, base_estimator=svc,learning_rate=1)
-
-# Train Adaboost Classifer
-model = abc.fit(x_train_tfidf, y_train)
-
-#Predict the response for test dataset
-y_pred = model.predict(x_test_tfidf)
-
-
-# Model Accuracy, how often is the classifier correct?
-print("Accuracy:",metrics.accuracy_score(y_test, y_pred))
-
 #Accuracy(3 estimators): 0.764
 #Accuracy(5 estimators): 0.684375
 #Accuracy(4 estimators): 0.7255
 
 # ---------- Trying some other parameters
+svc=SVC(probability=True, kernel='linear')
 
 # Create adaboost classifer object
 abc =AdaBoostClassifier(n_estimators=10, base_estimator=svc,learning_rate=0.1)
