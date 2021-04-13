@@ -1,4 +1,4 @@
-# ------------------  this file would look like this:
+# ------------------  Importing necessary libraries -----------
 from nltk.corpus import stopwords
 from nltk.tokenize import PunktSentenceTokenizer
 from nltk.stem import WordNetLemmatizer 
@@ -11,7 +11,8 @@ nltk.download('wordnet') #database of English language
 nltk.download('punkt') #tokenization
 nltk.download('vader_lexicon')    
     
-    
+
+# --------- Text cleaning ---------
 def preprocess(text):
     text = str(text)
     #strip 
@@ -42,7 +43,7 @@ def preprocess(text):
     
     return text
 
-
+# ------- TFIDF + AdaBoost -----------
 
 def model(text):
     # Preprocess text
